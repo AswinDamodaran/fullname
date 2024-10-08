@@ -7,12 +7,13 @@ function App() {
   const [firstname,setFirstname]=useState("")
   const [lastname,setLastname]=useState("")
   const [full,setFull]=useState("")
-  const [flag,setFlag]=useState(false)
 
   const handleSubmit=(e)=>{
-    setFlag(true)
     e.preventDefault()
-    setFull(`${firstname} ${lastname}`)
+     if(firstname && lastname){
+      setFull(`${firstname} ${lastname}`)
+     }
+    
   }
 
   return (
@@ -24,7 +25,7 @@ function App() {
         <label for="last">Last Name:</label>
         <input type='text' id="last" onChange={(e)=> setLastname(e.target.value)} required/><br/>
         <button type='submit' >Submit</button><br/>
-        {flag ? `Full Name: ${full}`: ""}
+        {full ? `Full Name: ${full}`: ""}
       </form>
       
     </div>
