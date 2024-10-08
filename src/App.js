@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <h1>Full Name Display</h1>
-      <form onSubmit={handleSubmit} >
+      <form onSubmit={handleSubmit} id='form' >
         <label for="first">First Name:</label>
         <input type='text' id="first" onChange={(e)=> setFirstname(e.target.value)} required /><br/>
         <label for="last">Last Name:</label>
