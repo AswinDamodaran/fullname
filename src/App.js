@@ -23,9 +23,10 @@ function App() {
         <input type='text' id="first" onChange={(e)=> setFirstname(e.target.value)} required /><br/>
         <label for="last">Last Name:</label>
         <input type='text' id="last" onChange={(e)=> setLastname(e.target.value)} required/><br/>
-        <button type='submit' >Submit</button>
+        <button type='submit' >Submit</button><br/>
+        {flag ? `Full Name: ${full}`: ""}
       </form>
-      {flag ? `Full Name: ${full}`: ""}
+      
     </div>
   );
 }
