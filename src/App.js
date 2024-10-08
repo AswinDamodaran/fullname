@@ -27,7 +27,7 @@ function App() {
         <button type='submit' >Submit</button><br/>
         
       </form>
-      {full ? `Full Name: ${full}`: ""}
+      <div>{full ? `Full Name: ${full}`: ""}</div>
     </div>
   );
 }
