@@ -7,8 +7,10 @@ function App() {
   const [firstname,setFirstname]=useState("")
   const [lastname,setLastname]=useState("")
   const [full,setFull]=useState("")
+  const [flag,setFlag]=useState(false)
 
   const handleSubmit=(e)=>{
+    setFlag(true)
     e.preventDefault()
     setFull(`${firstname} ${lastname}`)
   }
@@ -23,7 +25,7 @@ function App() {
         <input type='text' id="last" onChange={(e)=> setLastname(e.target.value)} required/><br/>
         <button type='submit' >Submit</button>
       </form>
-      Full Name: {full}
+      {flag ? `Full Name: ${full}`: ""}
     </div>
   );
 }
