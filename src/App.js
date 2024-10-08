@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 import { useState } from 'react';
 
@@ -25,9 +25,9 @@ function App() {
         <label for="last">Last Name:</label>
         <input type='text' id="last" onChange={(e)=> setLastname(e.target.value)} required/><br/>
         <button type='submit' >Submit</button><br/>
-        {full ? `Full Name: ${full}`: ""}
+        
       </form>
-      
+      {full ? `Full Name: ${full}`: ""}
     </div>
   );
 }
